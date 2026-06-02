@@ -1,0 +1,41 @@
+@import 'tailwindcss';.mid ul li a {color: white;
+text-decoration: none}
+
+.mid ul{display: flex;list-style: none;gap: 15px;}
+.right{
+  display: flex;
+  gap: 30px;
+}
+.container{padding:0px  43px;min-height: 70px;
+  background-color: #1D1D1F;color: white;
+  display: flex;
+  align-items: center;justify-content: space-between;
+}
+@media   (max-width:750px) {
+  .mid ul{
+    display:none
+  }
+}
+.right button{display: none;}
+
+
+@media (max-width:750px) {
+  .right button{
+    display: block;
+  }
+}
+.mobile-menu {
+  background: #1D1D1F;
+  padding: 20px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+}
+.mobile-menu li a{
+  color: white;text-decoration: none;
+}
