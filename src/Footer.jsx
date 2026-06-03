@@ -8,18 +8,14 @@ const Footer = () => {
   const [showShipping, setShowShipping] = useState(false)
 
   return (
-    <footer className="bg-black text-white px-6 py-10">
+    <footer className="bg-white text-black px-6 py-10">
       
       {/* top section */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
 
         {/* logo */}
         <div>
-          <img
-            src="/Black_White_Yellow_Simple_Initial_Name_Logo.webp"
-            alt="logo"
-            className="w-40"
-          />
+          <p className='text-2xl font-black tracking-wide'><span className='text-gray-900'>Fusion</span><span className='text-blue-600'>Mart</span> </p>
         </div>
 
         {/* links */}
@@ -63,7 +59,7 @@ const Footer = () => {
       {/* bottom line */}
      <div className="flex flex-col md:flex-row items-center justify-between mt-10 gap-4">
   <p className="text-gray-500 text-sm">
-    © 2026 Al Janat | Complete Family E-Store, Powered by Shopify
+    © 2026 Fusion Mart | Complete Family E-Store, Powered by Shopify
   </p>
 
   <div className="flex gap-4 text-xl">
