@@ -6,11 +6,11 @@ import { IoClose } from "react-icons/io5";
 
 const NAV_LINKS = [
   {
-    id: 'men',
+               id: 'men',
     label: 'MEN',
     submenu: ['T-Shirts', 'Shirts', 'Jeans', 'Sport Wear', 'Polos', 'Track Suits']
   },
-  {
+          {
     id: 'women',
     label: 'WOMEN',
     submenu: ['Dresses', 'Western Wear', 'Jeans', 'Track Suits', 'Ethnic']
@@ -41,10 +41,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+              <nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         
-        {/* Left: Logo */}
         <div className="flex-shrink-0">
           <p className="text-2xl font-black tracking-wide">
             <span className="text-gray-900">Fusion</span>
@@ -52,7 +51,6 @@ const Navbar = () => {
           </p>
         </div>
 
-        {/* Mid: Desktop Links */}
         <div className="hidden md:flex space-x-8">
           {NAV_LINKS.map((link) => (
             <div key={link.id} className="relative py-4">
@@ -85,7 +83,6 @@ const Navbar = () => {
           ))}
         </div>
         
-        {/* Right: Actions */}
         <div className="flex items-center gap-4">
           <button className="text-gray-700 hover:text-blue-600">
             <FaSearch className="text-xl" />
@@ -93,12 +90,10 @@ const Navbar = () => {
           
           <button className="text-gray-700 hover:text-blue-600 relative">
             <IoMdCart className="text-2xl" />
-            <span className="absolute -top-1.5 -right-1.5 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold">
-              0
-            </span>
-          </button>
+            
+                    </button>
           
-          {/* Hamburger Icon */}
+          
           <button 
             className="md:hidden p-1 text-gray-900" 
             onClick={() => setIsOpen(!isOpen)}
@@ -116,18 +111,18 @@ const Navbar = () => {
               const isDropdownOpen = activeDropdown === item.id;
               return (
                 <li key={item.id} className="border-b border-gray-800 pb-2">
-                  <button
+                         <button  
                     className="w-full flex items-center justify-between text-left font-medium py-2 hover:text-blue-400"
                     onClick={() => toggleDropdown(item.id)}
                   >
-                    <span>{item.label}</span>
+                         <span>{item.label}</span>
                     {isDropdownOpen ? <FaAngleUp /> : <FaAngleDown />}
-                  </button>
+                      </button>
 
                   {/* Mobile Submenu */}
                   {isDropdownOpen && (
                     <ul className="pl-4 mt-1 flex flex-col gap-2 text-gray-400 text-sm">
-                      {item.submenu.map((subItem) => (
+                               {item.submenu.map((subItem) => (
                         <li key={subItem}>
                           <a 
                             href="#" 

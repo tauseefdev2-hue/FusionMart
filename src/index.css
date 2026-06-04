@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+.custom-gallery .lg-content{
+    width: 40% !important;
+    max-width: 600px;
+    margin: 0 auto
+    ;
+}
+.custom-gallery .lg-item img{
+    width: 100% ;
+    height: auto;
+}
+
