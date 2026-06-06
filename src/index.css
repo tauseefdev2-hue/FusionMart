@@ -8,5 +8,37 @@
 .custom-gallery .lg-item img{
     width: 100% ;
     height: auto;
+}/* Make all buttons at least 44px tall - BUT only on mobile */
+@media (max-width: 767px) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
+/* For buttons that are just text (like "View All", "See More") */
+button.text-only {
+  min-height: 44px;
+  padding: 10px 16px;
+}
+
+/* For icon-only buttons (heart, search, cart) */
+button.icon-only {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+/* For the wishlist/heart button on product cards */
+.hear {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

@@ -22,6 +22,13 @@ const Productdetailpage = () => {
 
     const {id}=useParams();
     const product=productdata.find((item)=>item.id===id)
+    if(!product){
+  return (
+    <div className='text-center p-20 text-xl font-bold'>
+      Product not found
+    </div>
+  )
+}
             const sizesArray = product.sizes || ['S', 'M', 'L', 'XL', 'XXL'];
 
     if(!product)return <div className='text-center p-20  text-xl font-bold'>Product not fount</div>
@@ -56,7 +63,7 @@ const Productdetailpage = () => {
 <div className="quanti">
     <h5 className='font-semibold'>Quantity</h5>
     <div className="flex">  <button onClick={decrement} className='border-2 border-gray-400 w-11 h-11'>-</button>
-        <button  className='border-2 border-gray-400 w-11 h-11'>{quantity}</button>
+        <button  className='border-2 border-gray-400 w-11 h-11 px-3'>{quantity}</button>
         <button className='border-2 border-gray-400 w-11 h-11' onClick={increment}>+</button>
        </div>
 </div>

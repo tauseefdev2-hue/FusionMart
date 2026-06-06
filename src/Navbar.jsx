@@ -84,23 +84,23 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <button className="text-gray-700 hover:text-blue-600">
-            <FaSearch className="text-xl" />
-          </button>
-          
-          <button className="text-gray-700 hover:text-blue-600 relative">
-            <IoMdCart className="text-2xl" />
-            
-                    </button>
-          
-          
-          <button 
-            className="md:hidden p-1 text-gray-900" 
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <IoClose size={24} /> : <GiHamburgerMenu size={24} />}
-          </button>
-        </div>
+  <button className="text-gray-700 hover:text-blue-600 p-2">
+    <FaSearch className="text-xl" />
+  </button>
+  
+  <button className="text-gray-700 hover:text-blue-600 relative p-2">
+    <IoMdCart className="text-2xl" />
+  </button>
+  
+  {/* Add size classes that only apply on mobile */}
+  <button 
+    className="block md:hidden p-2 text-gray-900 hover:text-blue-600"
+    style={{ minWidth: 'auto', minHeight: 'auto' }} // Override global CSS
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    {isOpen ? <IoClose size={24} /> : <GiHamburgerMenu size={24} />}
+  </button>
+</div>
       </div>
 
       {/* Mobile Drawer */}
